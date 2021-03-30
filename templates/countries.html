@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+
+ {% load static %}
+{% load humanize %} 
+
+    {% block title %} <title>countries | {{countries.country}} </title>{% endblock %}
+
+      {% block css %} 
+     <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    {% endblock %}
+
+ {% block content %}
+
+ {% if countries.message %}
+ <h1 class="text-center mt-5">{{countries.message}}</h1>
+{% else %}
+<div class="text-center mt-4">
+ <h1 class="text-center mt-4">{{countries.country}}</h1>
+  <img src={{countries.countryInfo.flag}} style="width:150px;">
+  </div>
+<div class="covid-countries text-center mt-4 mb-5">
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card ">
+                <div class="card-body">
+                    <h2 class="card-title">Cases</h2>
+                    <h3>{{ countries.cases|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Today cases</h2>
+                    <h3>  {{ countries.todayCases|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Deaths</h2>
+                    <h3>{{ countries.deaths|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Today deaths</h2>
+                    <h3>{{ countries.todayDeaths|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Recovered</h2>
+                    <h3>{{ countries.recovered|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Today recovered</h2>
+                    <h3>{{ countries.todayRecovered|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Active</h2>
+                    <h3>{{ countries.active|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Critical</h2>
+                    <h3>{{ countries.critical|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+          <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Tests</h2>
+                    <h3>{{ countries.tests|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">One case</h2>
+                    <p class="card-subtitle mb-2 text-muted">Per people</p>
+                    <h3>{{ countries.oneCasePerPeople|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">One death</h2>
+                    <p class="card-subtitle mb-2 text-muted">Per people</p>
+                    <h3>{{ countries.oneDeathPerPeople|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+           <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">One test</h2>
+                    <p class="card-subtitle mb-2 text-muted">Per people</p>
+                    <h3>{{ countries.oneTestPerPeople|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+      
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Active</h2>
+                    <p class="card-subtitle mb-2 text-muted">Per One Million</p>
+                    <h3>{{ countries.activePerOneMillion|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Recovered</h2>
+                     <p class="card-subtitle mb-2 text-muted">Per One Million</p>
+                    <h3>{{ countries.recoveredPerOneMillion|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Critical</h2>
+                    <p class="card-subtitle mb-2 text-muted">Per One Million</p>
+                    <h3>{{ countries.criticalPerOneMillion|intcomma }}</h3>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container mt-5">
+          {{maps|safe}}
+    </div>
+    </div>
+
+   
+     {% endif %}
+{% endblock %}

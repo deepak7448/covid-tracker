@@ -1,0 +1,42 @@
+ {% extends 'base.html' %}
+  {% load static %}
+{% block title %} <title>Error!</title>{% endblock %}
+  {% block content %}
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap');
+h1,h2,h3,h4,p{
+font-family: 'Ubuntu', sans-serif;
+}        
+.page {
+position: absolute;
+top: 45%;
+right: 0;
+left: 0;
+transform: translateY(-50%);
+}
+</style>
+<section class="page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-12 mx-auto text-center">
+                    <div class="four_zero_four_bg">
+                        <img src="{% static 'img/error.svg' %}" style="width: 100px;">
+                    </div>
+                    <div class="contant_box_404">
+                        <h2>
+                            Connections Error!
+                        </h2>
+                        <p>Unfortunately we're having trouble loading the page you are looking for. Please come back in a while.</p>
+                    </div>
+                    <button class="btn btn-primary" type="submit" onClick="refreshPage()">Refresh Button</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+{% endblock %}

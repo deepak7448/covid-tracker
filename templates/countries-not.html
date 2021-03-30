@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+  {% load static %}
+{% block title %} <title>Error!</title>{% endblock %}
+  {% block content %}
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap');
+h1,h2,h3,h4,p{
+font-family: 'Ubuntu', sans-serif;
+}        
+.page {
+position: absolute;
+top: 45%;
+right: 0;
+left: 0;
+transform: translateY(-50%);
+}
+</style>
+<section class="page">
+        <div class="container">
+        <h1 style="position:absolute;
+                   left:0;
+                   text-align:center;
+                   right:0;
+                   top:40%;
+                   transform:translateY(-50%);
+                   font-weight: 200;">
+                   Country not found or doesn't have any cases</h1>
+
+        </div>
+    </section>
+    <script>
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+{% endblock %}

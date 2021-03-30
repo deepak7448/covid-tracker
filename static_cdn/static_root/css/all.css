@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: #4481eb;
+    --main-hover: #3166cf;
+    --nav-color: #999999;
+    --white-color: #fff;
+    --back-color: #f2f2f2;
+    --dark-color: #23272b;
+    --black-color: #000;
+    --border: #22242626;
+    --ubuntu-font: 'Ubuntu', sans-serif;
+    --baloo-font: 'Baloo Tamma 2', cursive;
+    --roboto-font: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--ubuntu-font);
+}
+
+.covid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.covid-countries {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.countries {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+}
+
+table.table thead th {
+    border-top: 1px solid #dee2e6;
+}
+
+table td {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+table.table a {
+    color: var(--main-color);
+    transition: all 400ms ease-in-out;
+}
+
+table.table a:hover {
+    color: var(--main-hover);
+}
+
+.form-control {
+    display: initial;
+    width: 60%;
+}
+
+@media screen and (max-width: 769px) {
+    .covid-countries {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
