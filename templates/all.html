@@ -90,7 +90,7 @@
                     {% if  countries.todayCases == 0 %}
                     <td>0</td>
                     {% else %}
-                    <td style="font-weight:500;background-color:#fb3 !important;color:#fff">
+                    <td style="font-weight:600;background-color:#fb3 !important;color:#fff">
                     +{{countries.todayCases|intcomma}}
                     </td>
                     {% endif %}
@@ -98,7 +98,7 @@
                     {% if  countries.todayDeaths == 0%}
                      <td>0</td>
                     {% else %}
-                     <td style="font-weight:500;background-color:#ff3547 !important;color:#fff">
+                     <td style="font-weight:600;background-color:#ff3547 !important;color:#fff">
                     +{{countries.todayDeaths|intcomma}}
                     </td>
                     {% endif %}
@@ -108,7 +108,7 @@
                     {% if  countries.todayRecovered == 0%}
                     <td>0</td>
                      {% else %}
-                     <td style="font-weight:500;background-color:#00c851 !important;color:#fff">
+                     <td style="font-weight:600;background-color:#00c851 !important;color:#fff">
                     +{{countries.todayRecovered|intcomma}}
                     </td>
                     {% endif %}
