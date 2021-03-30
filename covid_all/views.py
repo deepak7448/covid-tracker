@@ -43,10 +43,17 @@ def countries(request):
         folium.Marker(
             location=[lat,lon],
             tooltip=tooltip,
-            icon = folium.Icon(icon='cloud')
-        ).add_to(maps)
+            icon = folium.Icon(icon='cloud')).add_to(maps)
         # folium.GeoJson(country,
         #        name=con).add_to(maps)
+        folium.raster_layers.TileLayer('Open Street Map').add_to(maps)
+        folium.raster_layers.TileLayer('Stamen Terrain').add_to(maps)
+        folium.raster_layers.TileLayer('Stamen Toner').add_to(maps)
+        folium.raster_layers.TileLayer('Stamen Watercolor').add_to(maps)
+        folium.raster_layers.TileLayer('CartoDB Positron').add_to(maps)
+        folium.raster_layers.TileLayer('CartoDB Dark_Matter').add_to(maps)
+        folium.LayerControl().add_to(maps)
+
         maps=maps._repr_html_()
     except ConnectionError:
             return render(request,'error.html',)
