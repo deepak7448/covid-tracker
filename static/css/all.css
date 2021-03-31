@@ -63,6 +63,7 @@ table td {
 table.table a {
     color: var(--main-color);
     transition: all 400ms ease-in-out;
+    font-weight: 600;
 }
 
 table.table a:hover {
