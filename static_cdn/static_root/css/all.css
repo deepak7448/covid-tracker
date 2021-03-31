@@ -42,6 +42,7 @@ h4 {
 .countries {
     margin-left: 20px;
     margin-right: 20px;
+    overflow-x: auto;
 }
 
 .table td,
