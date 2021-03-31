@@ -3,7 +3,7 @@
 
  {% load static %}
    {% load humanize %} 
-     {% block title %} <title>Covid-19 </title>{% endblock %}
+     {% block title %} <title>COVID | COVID-19 | CORONA | CORONAVIRUS</title>{% endblock %}
      
       {% block css %} 
      <link rel="stylesheet" href="{% static 'css/all.css' %}">
@@ -83,7 +83,7 @@
                     <th scope="row">{{forloop.counter}}</th>
                     <td> 
                     <a href="countries/?q={{countries.country}}">{{countries.country}}</a>
-                    <img src={{countries.countryInfo.flag}} style="width:20px;margin-left: 10px;">
+                    <img src={{countries.countryInfo.flag}} style="width:20px;margin-left: 10px;" alt="{{countries.country}}">
                     </td>
                     <td>{{countries.cases|intcomma}}</td>
                     {% if  countries.todayCases == 0 %}
@@ -113,7 +113,7 @@
                     {% endif %}
                   
                     <td>{{countries.active|intcomma }}</td>
-                    <td>{{countries.critical|intcomma }}</td=>
+                    <td>{{countries.critical|intcomma }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

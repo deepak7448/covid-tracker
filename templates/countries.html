@@ -3,7 +3,7 @@
  {% load static %}
 {% load humanize %} 
 
-    {% block title %} <title>countries | {{countries.country}} </title>{% endblock %}
+    {% block title %} <title>countries | {{countries.country}} | COVID | COVID-19 | CORONA | CORONAVIRUS</title>{% endblock %}
 
       {% block css %} 
      <link rel="stylesheet" href="{% static 'css/all.css' %}">
@@ -16,7 +16,7 @@
 {% else %}
 <div class="text-center mt-4">
  <h1 class="text-center mt-4">{{countries.country}}</h1>
-  <img src={{countries.countryInfo.flag}} style="width:150px;">
+  <img src={{countries.countryInfo.flag}} style="width:150px;" alt="{{countries.country}}">
   </div>
 <div class="covid-countries text-center mt-4 mb-5">
         <div class="col-sm-4 col-md-4 col-lg-4 mt-2 mb-2">
