@@ -78,7 +78,7 @@
                 </tr>
             </thead>
             <tbody>
-            {% for countries in countries %}
+            {% for countries in countries|dictsortreversed:'cases' %}
                 <tr>
                     <th scope="row">{{forloop.counter}}</th>
                     <td> 
